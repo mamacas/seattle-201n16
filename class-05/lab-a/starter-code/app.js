@@ -8,9 +8,9 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-function sum(num1, num2) { //eslint-disable-line
-    var sumOfNums = (num1 + num2);
-    return [sumOfNums, "The sum of " + num1 + " and " + num2 + " is " + sumOfNums + "."];
+function sum(a, b, c) { //eslint-disable-line
+    var sumOfNums = (a + b);
+    return [sumOfNums, "The sum of " + a + " and " + b + " is " + sumOfNums + "."];
 }
 // sum(4, 7);
 
@@ -28,7 +28,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b) { //eslint-disable-line
+function multiply(a, b, c) { //eslint-disable-line
     var multNums = (a * b);
     return [multNums, "The product of " + a + " and " + b + " is " + multNums + "."];
 }
@@ -51,11 +51,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+    sum(a, b, c);
+    multiply(a, b, c);
+    //var sumThis = (sum(a, b, c));
+    //var multiplyThis = (multiply(a, b, c));
+    return [sum, multiply, a + " and " + b + " and " + c + " sum to " + sum + ".", "The product of " + a + " and " + b + " and " + c + " is " + multiply + "."];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
