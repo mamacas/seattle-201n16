@@ -8,7 +8,7 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-function sum(a, b, c) { //eslint-disable-line
+function sum(a, b) { //eslint-disable-line
     var sumOfNums = (a + b);
     return [sumOfNums, "The sum of " + a + " and " + b + " is " + sumOfNums + "."];
 }
@@ -27,7 +27,7 @@ Write a function called multiply() that takes in two numbers as arguments and re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiply() function and see if the test passes.*/
 
 // Write your code here
-function multiply(a, b, c) { //eslint-disable-line
+function multiply(a, b) { //eslint-disable-line
     var multNums = (a * b);
     return [multNums, "The product of " + a + " and " + b + " is " + multNums + "."];
 }
@@ -50,9 +50,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    var sumOfNums = (sum(a, b, c));
-    var multNums = (multiply(a, b, c));
-    return [sumOfNums, multNums, a + " and " + b + " and " + c + " sum to " + sumOfNums + ".", "The product of " + a + " and " + b + " and " + c + " is " + multNums + "."];
+    var sumThis = sum(sum(a, b)[0], c);
+    var multThis = multiply(multiply(a, b)[0], c);
+    return [sumThis[0], multThis[0], a + " and " + b + " and " + c + " sum to " + sumThis[0] + ".", "The product of " + a + " and " + b + " and " + c + " is " + multThis[0] + "."];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -71,12 +71,12 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
-var testArray = [2, 3, 4]; //eslint-disable-line
+// var testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
-    var testArray = sum(testArray);
-    return [sum, testArray + " was passed in as an array of numbers, and " + sum + " is their sum."];
-}
+// function sumArray(sumArr) { //eslint-disable-line
+//     var testArray = 
+//     return [sum, testArray + " was passed in as an array of numbers, and " + sum + " is their sum."];
+// }
 
 // Here is the test for sumArray(); uncomment it to run it
 
